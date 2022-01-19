@@ -105,6 +105,7 @@ AS_INCLUDES =
 C_INCLUDES =  \
 -IInc \
 -IDrivers/STM32F1xx_HAL_Driver/Inc \
+-IDrivers/BSP/STM3210C_EVAL \
 -IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include \

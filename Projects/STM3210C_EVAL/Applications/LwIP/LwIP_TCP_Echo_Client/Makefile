@@ -36,25 +36,70 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
-Src/main.c \
-Src/stm32f1xx_it.c \
-Src/stm32f1xx_hal_msp.c \
-Src/app_ethernet.c \
-Src/ethernetif.c \
-Src/tcp_echoclient.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_instrumentation.c
+Application/SW4STM32/startup_stm32f107xc.c \
+Application/SW4STM32/syscalls.c \
+Application/User/app_ethernet.c \
+Application/User/ethernetif.c \
+Application/User/main.c \
+Application/User/stm32f1xx_it.c \
+Application/User/tcp_echoclient.c \
+Application/Utilities/lcd_log.c \
+Drivers/BSP/Components/ili9320.c \
+Drivers/BSP/Components/ili9325.c \
+Drivers/BSP/Components/stmpe811.c \
+Drivers/BSP/STM3210C_EVAL/stm3210c_eval.c \
+Drivers/BSP/STM3210C_EVAL/stm3210c_eval_io.c \
+Drivers/BSP/STM3210C_EVAL/stm3210c_eval_lcd.c \
+Drivers/CMSIS/system_stm32f1xx.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_cortex.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_dma.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_eth.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_flash.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_flash_ex.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_gpio.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_i2c.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_pwr.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_rcc.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_spi.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_sram.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_uart.c \
+Drivers/STM32F1xx_HAL_Driver/stm32f1xx_ll_fsmc.c \
+Middlewares/LwIP/Api/api_lib.c \
+Middlewares/LwIP/Api/api_msg.c \
+Middlewares/LwIP/Api/err.c \
+Middlewares/LwIP/Api/netbuf.c \
+Middlewares/LwIP/Api/netdb.c \
+Middlewares/LwIP/Api/netifapi.c \
+Middlewares/LwIP/Api/sockets.c \
+Middlewares/LwIP/Api/tcpip.c \
+Middlewares/LwIP/Core/IPv4/autoip.c \
+Middlewares/LwIP/Core/IPv4/dhcp.c \
+Middlewares/LwIP/Core/IPv4/etharp.c \
+Middlewares/LwIP/Core/IPv4/icmp.c \
+Middlewares/LwIP/Core/IPv4/igmp.c \
+Middlewares/LwIP/Core/IPv4/ip4.c \
+Middlewares/LwIP/Core/IPv4/ip4_addr.c \
+Middlewares/LwIP/Core/IPv4/ip4_frag.c \
+Middlewares/LwIP/Core/def.c \
+Middlewares/LwIP/Core/dns.c \
+Middlewares/LwIP/Core/inet_chksum.c \
+Middlewares/LwIP/Core/init.c \
+Middlewares/LwIP/Core/ip.c \
+Middlewares/LwIP/Core/mem.c \
+Middlewares/LwIP/Core/memp.c \
+Middlewares/LwIP/Core/netif.c \
+Middlewares/LwIP/Core/pbuf.c \
+Middlewares/LwIP/Core/raw.c \
+Middlewares/LwIP/Core/stats.c \
+Middlewares/LwIP/Core/sys.c \
+Middlewares/LwIP/Core/tcp.c \
+Middlewares/LwIP/Core/tcp_in.c \
+Middlewares/LwIP/Core/tcp_out.c \
+Middlewares/LwIP/Core/timeouts.c \
+Middlewares/LwIP/Core/udp.c \
+Middlewares/LwIP/Netif/ethernet.c \
+instrumentation.c
 
 # ASM sources
 ASM_SOURCES =  \

@@ -39,6 +39,9 @@ C_SOURCES =  \
 Src/main.c \
 Src/stm32f1xx_it.c \
 Src/stm32f1xx_hal_msp.c \
+Src/app_ethernet.c \
+Src/ethernetif.c \
+Src/tcp_echoclient.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c \
@@ -51,10 +54,7 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c \
-Src/system_stm32f1xx.c \
-instrumentation.c
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_instrumentation.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -105,6 +105,12 @@ AS_INCLUDES =
 C_INCLUDES =  \
 -IInc \
 -IDrivers/STM32F1xx_HAL_Driver/Inc \
+-IUtilities/Fonts \
+-IUtilities/Log \
+-IMiddlewares/Third_Party/LwIP/src/include/lwip \
+-IMiddlewares/Third_Party/LwIP/src/include \
+-IMiddlewares/Third_Party/LwIP/src/include/lwip/arch \
+-IMiddlewares/Third_Party/LwIP/system/ \
 -IDrivers/BSP/STM3210C_EVAL \
 -IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \

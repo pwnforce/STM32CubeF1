@@ -149,6 +149,7 @@ AS_INCLUDES =
 C_INCLUDES =  \
 -IInc \
 -IDrivers/STM32F1xx_HAL_Driver/Inc \
+-IUtilities \
 -IUtilities/Fonts \
 -IUtilities/Log \
 -IMiddlewares/Third_Party/LwIP/src/include/lwip \
@@ -156,6 +157,7 @@ C_INCLUDES =  \
 -IMiddlewares/Third_Party/LwIP/src/include/lwip/arch \
 -IMiddlewares/Third_Party/LwIP/system/ \
 -IDrivers/BSP/STM3210C_EVAL \
+-IDrivers/BSP/Components \
 -IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include \

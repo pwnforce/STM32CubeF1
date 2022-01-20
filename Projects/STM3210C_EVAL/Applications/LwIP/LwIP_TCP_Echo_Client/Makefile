@@ -36,13 +36,12 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
-Application/SW4STM32/syscalls.c \
-Application/User/app_ethernet.c \
-Application/User/ethernetif.c \
-Application/User/main.c \
-Application/User/stm32f1xx_it.c \
-Application/User/tcp_echoclient.c \
-Application/Utilities/lcd_log.c \
+Src/app_ethernet.c \
+Src/ethernetif.c \
+Src/main.c \
+Src/stm32f1xx_it.c \
+Src/tcp_echoclient.c \
+Src/lcd_log.c \
 Drivers/BSP/Components/ili9320.c \
 Drivers/BSP/Components/ili9325.c \
 Drivers/BSP/Components/stmpe811.c \

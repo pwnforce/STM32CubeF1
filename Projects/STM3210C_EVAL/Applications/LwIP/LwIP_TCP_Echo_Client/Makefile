@@ -139,7 +139,8 @@ AS_DEFS =
 # C defines
 C_DEFS =  \
 -DUSE_HAL_DRIVER \
--DSTM32F103xB \
+-DSTM32F107xC \
+-DUSE_STM3210C_EVAL \
 
 
 # AS includes

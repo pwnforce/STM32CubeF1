@@ -36,6 +36,7 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
+SW4STM32/syscalls.c \
 Src/app_ethernet.c \
 Src/ethernetif.c \
 Src/main.c \

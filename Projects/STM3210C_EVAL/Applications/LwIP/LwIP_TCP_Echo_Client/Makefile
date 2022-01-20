@@ -36,7 +36,6 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
-Application/SW4STM32/startup_stm32f107xc.c \
 Application/SW4STM32/syscalls.c \
 Application/User/app_ethernet.c \
 Application/User/ethernetif.c \
@@ -103,7 +102,7 @@ instrumentation.c
 
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32f103xb.s
+startup_stm32f107xc.c
 
 
 #######################################

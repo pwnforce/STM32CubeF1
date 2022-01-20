@@ -42,7 +42,7 @@ Src/ethernetif.c \
 Src/main.c \
 Src/stm32f1xx_it.c \
 Src/tcp_echoclient.c \
-Src/lcd_log.c \
+Utilities/lcd_log.c \
 Drivers/BSP/Components/ili9320.c \
 Drivers/BSP/Components/ili9325.c \
 Drivers/BSP/Components/stmpe811.c \

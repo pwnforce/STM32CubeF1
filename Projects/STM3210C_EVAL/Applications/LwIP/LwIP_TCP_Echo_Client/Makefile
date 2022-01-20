@@ -45,7 +45,7 @@ Src/tcp_echoclient.c \
 Utilities/Log/lcd_log.c \
 Drivers/BSP/Components/ili9320/ili9320.c \
 Drivers/BSP/Components/ili9325/ili9325.c \
-Drivers/BSP/Components/stmpe811.c \
+Drivers/BSP/Components/stmpe811/stmpe811.c \
 Drivers/BSP/STM3210C_EVAL/stm3210c_eval.c \
 Drivers/BSP/STM3210C_EVAL/stm3210c_eval_io.c \
 Drivers/BSP/STM3210C_EVAL/stm3210c_eval_lcd.c \

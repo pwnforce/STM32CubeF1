@@ -64,17 +64,17 @@ void __sanitizer_cov_trace_pc_guard_init(uint32_t* start, uint32_t* stop) {
   unsigned long inst_ratio;
 
   if (start == stop || *start) {
-      printf("__sanitizer_cov_trace_pc_guard_init returning");
+      //printf("__sanitizer_cov_trace_pc_guard_init returning");
       return;
   }
 
-  printf("Init afl instrumentation!\n");
+  //printf("Init afl instrumentation!\n");
 
 
   uint32_t *GLOBAL_DATA = CONSTRUCTOR_MAGIC_ADDRESS;
   AFL_MAP = (uint8_t*) GLOBAL_DATA;  // obtain reference to AFL_MAP
   if (AFL_MAP == NULL) {
-    fprintf(stderr, "error obtaining AFL_MAP\n");
+    //fprintf(stderr, "error obtaining AFL_MAP\n");
     exit(1);
   }
 

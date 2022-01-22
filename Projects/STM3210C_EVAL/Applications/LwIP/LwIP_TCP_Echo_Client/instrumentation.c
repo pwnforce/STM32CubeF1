@@ -64,11 +64,12 @@ void __sanitizer_cov_trace_pc_guard_init(uint32_t* start, uint32_t* stop) {
   unsigned long inst_ratio;
 
   if (start == stop || *start) {
-      printf("__sanitizer_cov_trace_pc_guard_init returning");
+      //printf("__sanitizer_cov_trace_pc_guard_init returning");
+      while (true){}
       return;
   }
 
-  printf("Init afl instrumentation!\n");
+  //printf("Init afl instrumentation!\n");
 
 
   uint32_t *GLOBAL_DATA = (uint32_t*) CONSTRUCTOR_MAGIC_ADDRESS;

@@ -27,7 +27,7 @@ static const uint64_t PRNG_MULT = 0x5DEECE66D;
 static const uint64_t PRNG_INC = 11;
 static const uint64_t PRNG_SEED_MASK = ((1ll << 48) - 1ll);
 static const uint32_t PRNG_OUT_FIRST_BIT = 16;
-static const uint32_t PRNG_OUT_MASK = ((1l << 32) - 1);
+static const uint32_t PRNG_OUT_MASK = ((1ll << 32) - 1ll);
 static uint64_t sancov_prng_seed;
 
 // internal state of the coverage sanitizer

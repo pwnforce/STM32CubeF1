@@ -71,7 +71,7 @@ void __sanitizer_cov_trace_pc_guard_init(uint32_t* start, uint32_t* stop) {
   //printf("Init afl instrumentation!\n");
 
 
-  uint32_t *GLOBAL_DATA = &CONSTRUCTOR_MAGIC_ADDRESS;
+  uint32_t *GLOBAL_DATA = (void*) CONSTRUCTOR_MAGIC_ADDRESS;
   AFL_MAP = (uint8_t*) GLOBAL_DATA;  // obtain reference to AFL_MAP
   if (AFL_MAP == NULL) {
     //fprintf(stderr, "error obtaining AFL_MAP\n");

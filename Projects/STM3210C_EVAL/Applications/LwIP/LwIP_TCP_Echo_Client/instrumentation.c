@@ -75,7 +75,7 @@ void __sanitizer_cov_trace_pc_guard_init(uint32_t* start, uint32_t* stop) {
   AFL_MAP = (uint8_t*) GLOBAL_DATA;  // obtain reference to AFL_MAP
   if (AFL_MAP == NULL) {
     //fprintf(stderr, "error obtaining AFL_MAP\n");
-    exit(1);
+    return;
   }
 
   // TODO: mimic afl behavior here

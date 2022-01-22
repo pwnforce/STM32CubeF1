@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include <string.h>
-// #include <stdio.h>
+#include <stdio.h>
 
 // magic address of one page size (4k) mapped r+w to share data between
 // loader and fimrware constructors

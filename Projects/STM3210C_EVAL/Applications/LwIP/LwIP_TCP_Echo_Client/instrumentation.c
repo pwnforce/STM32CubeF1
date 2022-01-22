@@ -65,7 +65,7 @@ void __sanitizer_cov_trace_pc_guard_init(uint32_t* start, uint32_t* stop) {
 
   if (start == stop || *start) {
       //printf("__sanitizer_cov_trace_pc_guard_init returning");
-      while (true){}
+      while(1) {}
       return;
   }
 

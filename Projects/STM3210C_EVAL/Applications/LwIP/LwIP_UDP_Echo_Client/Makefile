@@ -41,7 +41,7 @@ Src/app_ethernet.c \
 Src/ethernetif.c \
 Src/main.c \
 Src/stm32f1xx_it.c \
-Src/tcp_echoclient.c \
+Src/udp_echoclient.c \
 Utilities/Log/lcd_log.c \
 Drivers/BSP/Components/ili9320/ili9320.c \
 Drivers/BSP/Components/ili9325/ili9325.c \

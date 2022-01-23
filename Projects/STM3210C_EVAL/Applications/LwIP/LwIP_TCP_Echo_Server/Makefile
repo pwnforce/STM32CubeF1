@@ -41,7 +41,7 @@ Src/app_ethernet.c \
 Src/ethernetif.c \
 Src/main.c \
 Src/stm32f1xx_it.c \
-Src/tcp_echoclient.c \
+Src/tcp_echoserver.c \
 Utilities/Log/lcd_log.c \
 Drivers/BSP/Components/ili9320/ili9320.c \
 Drivers/BSP/Components/ili9325/ili9325.c \
@@ -60,10 +60,9 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c \
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.c \
 Middlewares/Third_Party/LwIP/src/api/api_lib.c \
 Middlewares/Third_Party/LwIP/src/api/api_msg.c \
 Middlewares/Third_Party/LwIP/src/api/err.c \
@@ -151,7 +150,6 @@ C_INCLUDES =  \
 -IInc \
 -IDrivers/STM32F1xx_HAL_Driver/Inc \
 -IUtilities \
--IUtilities/Fonts \
 -IUtilities/Log \
 -IMiddlewares/Third_Party/LwIP/src/include/lwip \
 -IMiddlewares/Third_Party/LwIP/src/include \

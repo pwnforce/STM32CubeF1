@@ -58,7 +58,7 @@ Src/cube_hal_f1.c \
 Src/main.c \
 Src/stm32f1xx_hal_msp.c \
 Src/stm32f1xx_it.c \
-instrumentation.c
+Src/instrumentation.c
 
 # ASM sources
 ASM_SOURCES =  \

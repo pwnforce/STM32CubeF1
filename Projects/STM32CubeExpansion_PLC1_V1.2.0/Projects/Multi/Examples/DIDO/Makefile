@@ -62,7 +62,7 @@ instrumentation.c
 
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32f107xc.s
+startup_stm32f103xb.s
 
 
 #######################################

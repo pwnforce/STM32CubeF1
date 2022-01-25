@@ -109,18 +109,15 @@ AS_INCLUDES =
 # C includes
 C_INCLUDES =  \
 -IInc \
--IDrivers/STM32F1xx_HAL_Driver/Inc \
--IUtilities \
--IUtilities/Fonts \
--IUtilities/Log \
--IMiddlewares/Third_Party/LwIP/src/include/lwip \
--IMiddlewares/Third_Party/LwIP/src/include \
--IMiddlewares/Third_Party/LwIP/src/include/lwip/arch \
--IMiddlewares/Third_Party/LwIP/system/ \
+-IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/BSP/STM3210C_EVAL \
 -IDrivers/BSP/Components \
--IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
--IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
+-IDrivers/BSP/Components/CLT01_38SQ7 \
+-IDrivers/BSP/Components/VNI8200XP \
+-IDrivers/BSP/STM32F1xx_Nucleo \
+-IDrivers/BSP/X_NUCLEO_PLC01A1 \
+-IDrivers/BSP/Components/Common \
+-IDrivers/STM32F1xx_HAL_Driver/Inc \
 -IDrivers/CMSIS/Include \
 -I$(XTOOLS_DIR)/arm-none-eabi/include
 

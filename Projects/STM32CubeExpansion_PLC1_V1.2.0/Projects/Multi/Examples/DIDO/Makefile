@@ -39,7 +39,7 @@ C_SOURCES =  \
 Drivers/BSP/Components/CLT01_38SQ7/clt01_38s.c \
 Drivers/BSP/Components/VNI8200XP/vni8200xp.c \
 Drivers/BSP/STM32F1xx_Nucleo/stm32f1xx_nucleo.c \
-Drivers/BSP/X_NUCLEO_PLC01A1/X_NUCLEO_PLC01A1.c \
+Drivers/BSP/X_NUCLEO_PLC01A1/x_nucleo_plc01a1.c \
 Drivers/CMSIS/system_stm32f1xx.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c \

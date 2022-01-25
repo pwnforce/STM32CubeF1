@@ -36,6 +36,7 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
+instrumentation.c \
 Drivers/BSP/Components/CLT01_38SQ7/clt01_38s \
 Drivers/BSP/Components/VNI8200XP/vni8200xp.c \
 Drivers/BSP/STM32F1xx_Nucleo/stm32f1xx_nucleo.c \
@@ -57,8 +58,8 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c \
 Src/cube_hal_f1.c \
 Src/stm32f1xx_hal_msp.c \
 Src/main.c \
-Src/stm32f1xx_it.c \
-instrumentation.c
+Src/stm32f1xx_it.c
+
 
 # ASM sources
 ASM_SOURCES =  \

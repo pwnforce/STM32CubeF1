@@ -36,6 +36,7 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
+C_SOURCES =  \
 Src/cube_hal_f1.c \
 Src/stm32f1xx_hal_msp.c \
 Src/main.c \
@@ -62,7 +63,7 @@ instrumentation.c
 
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32f103xb.s
+startup_stm32f107xc.s
 
 
 #######################################
@@ -109,15 +110,18 @@ AS_INCLUDES =
 # C includes
 C_INCLUDES =  \
 -IInc \
--IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
+-IDrivers/STM32F1xx_HAL_Driver/Inc \
+-IUtilities \
+-IUtilities/Fonts \
+-IUtilities/Log \
+-IMiddlewares/Third_Party/LwIP/src/include/lwip \
+-IMiddlewares/Third_Party/LwIP/src/include \
+-IMiddlewares/Third_Party/LwIP/src/include/lwip/arch \
+-IMiddlewares/Third_Party/LwIP/system/ \
 -IDrivers/BSP/STM3210C_EVAL \
 -IDrivers/BSP/Components \
--IDrivers/BSP/Components/CLT01_38SQ7 \
--IDrivers/BSP/Components/VNI8200XP \
--IDrivers/BSP/STM32F1xx_Nucleo \
--IDrivers/BSP/X_NUCLEO_PLC01A1 \
--IDrivers/BSP/Components/Common \
--IDrivers/STM32F1xx_HAL_Driver/Inc \
+-IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
+-IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include \
 -I$(XTOOLS_DIR)/arm-none-eabi/include
 
@@ -195,3 +199,4 @@ clean:
 -include $(wildcard $(BUILD_DIR)/*.d)
 
 # *** EOF ***
+

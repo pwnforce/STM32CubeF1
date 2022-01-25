@@ -36,7 +36,6 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
-C_SOURCES =  \
 Src/cube_hal_f1.c \
 Src/stm32f1xx_hal_msp.c \
 Src/main.c \

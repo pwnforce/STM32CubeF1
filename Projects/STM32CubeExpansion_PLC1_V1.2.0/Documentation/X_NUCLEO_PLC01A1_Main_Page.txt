@@ -1,0 +1,50 @@
+/*!
+   @mainpage Documentation for X-CUBE-PLC1 Software for STM32, Expansion for STM32Cube
+  
+   @image html st_logo.png
+  
+   <b>Introduction</b>
+  
+   The X-CUBE-PLC1 an expansion software package for STM32Cube. The software is demonstrating data in and data out application based on CLT01-38SQ7 and VNI8200XP. It is built on top of STM32Cube software technology that ease portability across different STM32 microcontrollers. The software comes with examples of X-NUCLEO-PLC01A1, when connecged to an STM32 NUCLEO.
+  
+For the content of this package, the development toolchains and compilers to use and the supported devices and evaluation boards, refer to the Release Notes in the root directory of this package.
+
+   @image html image_x-nucleo-plc01a1.jpg
+  
+   <b>List of pin resources usage for X-NUCLEO-PLC01A1</b>
+
+   For NUCLEO-F030R8, NUCLEO-F334R8, NUCLEO-F401RE Devices
+
+   | Pin  | Name         | Description                                                                     | Notes                                 |
+   |------|--------------|---------------------------------------------------------------------------------|---------------------------------------|
+   | PB3  | SPI_SCK      | SPI bus,                                                               | Isolation via R13, default closed    |
+   | PA6  | SPI_MISO     | SPI bus,                                                               | Isolation via R2, default closed    | 
+   | PA7  | SPI_MOSI     | SPI bus,                                                               | Isolation via R3, default closed    |
+   | PB6  | SPI_CS2 | chip select for VNI8200XP, Push Pull (it can be set as Open Drain via software)  | Isolation via SB27, default closed    |
+   | PC7 | SPI_CS1  | chip select for CLT01-38SQ7, Push Pull (it can be set as Open Drain via software)  | Isolation via SB25, default closed    |
+   | PB10  | OUT_EN  | Output enable for VNI8200XP, Push Pull (it can be set as Open Drain via software)   | Isolation via SB26, default closed    |
+
+
+   For NUCLEO-F103RB Devices
+
+   | Pin  | Name         | Description                                                                     | Notes                                 |
+   |------|--------------|---------------------------------------------------------------------------------|---------------------------------------|
+   |*PA5  | SPI_SCK      | SPI bus,                                                               | Isolation via R13,default mounted. Open R13 and short R1 to use with NUCLEO-F103RB    |
+   | PA6  | SPI_MISO     | SPI bus,                                                               | Isolation via R2, default closed    | 
+   | PA7  | SPI_MOSI     | SPI bus,                                                               | Isolation via R3, default closed    |
+   | PB6  | SPI_CS2 | chip select for VNI8200XP, Push Pull (it can be set as Open Drain via software)  | Isolation via SB27, default closed    |
+   | PC7 | SPI_CS1  | chip select for CLT01-38SQ7, Push Pull (it can be set as Open Drain via software)  | Isolation via SB25, default closed    |
+   | PB10  | OUT_EN  | Output enable for VNI8200XP, Push Pull (it can be set as Open Drain via software)   | Isolation via SB26, default closed    |
+*/ 
+  
+
+
+
+
+
+
+
+
+
+*/
+

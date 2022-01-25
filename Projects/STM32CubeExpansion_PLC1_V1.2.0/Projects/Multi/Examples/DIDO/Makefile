@@ -36,73 +36,36 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
-SW4STM32/syscalls.c \
-Src/app_ethernet.c \
-Src/ethernetif.c \
+
+Src/cube_hal_f1.c \
+Src/stm32f1xx_hal_msp.c \
 Src/main.c \
 Src/stm32f1xx_it.c \
-Src/tcp_echoclient.c \
-Utilities/Log/lcd_log.c \
-Drivers/BSP/Components/ili9320/ili9320.c \
-Drivers/BSP/Components/ili9325/ili9325.c \
-Drivers/BSP/Components/stmpe811/stmpe811.c \
-Drivers/BSP/STM3210C_EVAL/stm3210c_eval.c \
-Drivers/BSP/STM3210C_EVAL/stm3210c_eval_io.c \
-Drivers/BSP/STM3210C_EVAL/stm3210c_eval_lcd.c \
+Drivers/BSP/Components/CLT01_38SQ7/clt01_38s \
+Drivers/BSP/Components/VNI8200XP/vni8200xp.c \
+Drivers/BSP/STM32F1xx_Nucleo/stm32f1xx_nucleo.c \
+Drivers/BSP/X_NUCLEO_PLC01A1/X_NUCLEO_PLC01A1.c \
 Drivers/CMSIS/system_stm32f1xx.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.c \
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c \
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c \
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.c \
-Middlewares/Third_Party/LwIP/src/api/api_lib.c \
-Middlewares/Third_Party/LwIP/src/api/api_msg.c \
-Middlewares/Third_Party/LwIP/src/api/err.c \
-Middlewares/Third_Party/LwIP/src/api/netbuf.c \
-Middlewares/Third_Party/LwIP/src/api/netdb.c \
-Middlewares/Third_Party/LwIP/src/api/netifapi.c \
-Middlewares/Third_Party/LwIP/src/api/sockets.c \
-Middlewares/Third_Party/LwIP/src/api/tcpip.c \
-Middlewares/Third_Party/LwIP/src/core/ipv4/autoip.c \
-Middlewares/Third_Party/LwIP/src/core/ipv4/dhcp.c \
-Middlewares/Third_Party/LwIP/src/core/ipv4/etharp.c \
-Middlewares/Third_Party/LwIP/src/core/ipv4/icmp.c \
-Middlewares/LThird_Party/wIP/src/core/ipv4/igmp.c \
-Middlewares/Third_Party/LwIP/src/core/ipv4/ip4.c \
-Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_addr.c \
-Middlewares/Third_Party/LwIP/src/core/ipv4/ip4_frag.c \
-Middlewares/Third_Party/LwIP/src/core/def.c \
-Middlewares/Third_Party/LwIP/src/core/dns.c \
-Middlewares/Third_Party/LwIP/src/core/inet_chksum.c \
-Middlewares/Third_Party/LwIP/src/core/init.c \
-Middlewares/Third_Party/LwIP/src/core/ip.c \
-Middlewares/Third_Party/LwIP/src/core/mem.c \
-Middlewares/Third_Party/LwIP/src/core/memp.c \
-Middlewares/Third_Party/LwIP/src/core/netif.c \
-Middlewares/LwIP/src/core/pbuf.c \
-Middlewares/Third_Party/LwIP/src/core/raw.c \
-Middlewares/Third_Party/LwIP/src/core/stats.c \
-Middlewares/Third_Party/LwIP/src/core/sys.c \
-Middlewares/Third_Party/LwIP/src/core/tcp.c \
-Middlewares/Third_Party/LwIP/src/core/tcp_in.c \
-Middlewares/Third_Party/LwIP/src/core/tcp_out.c \
-Middlewares/Third_Party/LwIP/src/core/timeouts.c \
-Middlewares/Third_Party/LwIP/src/core/udp.c \
-Middlewares/Third_Party/LwIP/src/netif/ethernet.c \
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi_ex.c \
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c \
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c \
+
+
 instrumentation.c
 
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32f107xc.s
+startup_stm32f103xb.s
 
 
 #######################################
@@ -149,18 +112,15 @@ AS_INCLUDES =
 # C includes
 C_INCLUDES =  \
 -IInc \
--IDrivers/STM32F1xx_HAL_Driver/Inc \
--IUtilities \
--IUtilities/Fonts \
--IUtilities/Log \
--IMiddlewares/Third_Party/LwIP/src/include/lwip \
--IMiddlewares/Third_Party/LwIP/src/include \
--IMiddlewares/Third_Party/LwIP/src/include/lwip/arch \
--IMiddlewares/Third_Party/LwIP/system/ \
+-IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/BSP/STM3210C_EVAL \
 -IDrivers/BSP/Components \
--IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
--IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
+-IDrivers/BSP/Components/CLT01_38SQ7 \
+-IDrivers/BSP/Components/VNI8200XP \
+-IDrivers/BSP/STM32F1xx_Nucleo \
+-IDrivers/BSP/X_NUCLEO_PLC01A1 \
+-IDrivers/BSP/Components/Common \
+-IDrivers/STM32F1xx_HAL_Driver/Inc \
 -IDrivers/CMSIS/Include \
 -I$(XTOOLS_DIR)/arm-none-eabi/include
 

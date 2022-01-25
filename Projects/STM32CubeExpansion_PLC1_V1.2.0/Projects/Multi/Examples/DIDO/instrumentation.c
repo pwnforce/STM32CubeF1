@@ -25,9 +25,9 @@ extern __attribute__((constructor)) void __sancov_ctor(void);
  * */
 static const uint64_t PRNG_MULT = 0x5DEECE66D;
 static const uint64_t PRNG_INC = 11;
-static const uint64_t PRNG_SEED_MASK = ((1ll << 48) - 1ll);
+static const uint64_t PRNG_SEED_MASK = ((1l << 48) - 1);
 static const uint32_t PRNG_OUT_FIRST_BIT = 16;
-static const uint64_t PRNG_OUT_MASK = ((1ll << 32) - 1ll);
+static const uint32_t PRNG_OUT_MASK = ((1l << 32) - 1);
 static uint64_t sancov_prng_seed;
 
 // internal state of the coverage sanitizer
@@ -63,20 +63,19 @@ void __sanitizer_cov_trace_pc_guard_init(uint32_t* start, uint32_t* stop) {
 
   unsigned long inst_ratio;
 
-//   if (start == stop || *start) {
-//       //printf("__sanitizer_cov_trace_pc_guard_init returning");
-//       while(1) {}
-//       return;
-//   }
+  if (start == stop || *start) {
+      printf("__sanitizer_cov_trace_pc_guard_init returning");
+      return;
+  }
 
-  //printf("Init afl instrumentation!\n");
+  printf("Init afl instrumentation!\n");
 
 
-  uint32_t *GLOBAL_DATA = (uint32_t*) CONSTRUCTOR_MAGIC_ADDRESS;
-  AFL_MAP = (uint8_t*) *GLOBAL_DATA;  // obtain reference to AFL_MAP
+  uint32_t *GLOBAL_DATA = CONSTRUCTOR_MAGIC_ADDRESS;
+  AFL_MAP = (uint8_t*) GLOBAL_DATA;  // obtain reference to AFL_MAP
   if (AFL_MAP == NULL) {
-    //fprintf(stderr, "error obtaining AFL_MAP\n");
-    return;
+    fprintf(stderr, "error obtaining AFL_MAP\n");
+    exit(1);
   }
 
   // TODO: mimic afl behavior here
